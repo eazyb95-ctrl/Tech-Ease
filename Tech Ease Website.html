@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Ease | Friendly, Stress-Free In-Home Tech Support</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Quicksand (Rounded for Headings) & Inter (Clean for Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Theme Configuration for Tech Ease Brand Palette -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandTeal: '#246D75',
+                        brandSage: '#90A995',
+                        brandYellow: '#ECA824',
+                        brandSlate: '#22252A',
+                        brandBeige: '#FDFBF7',
+                        brandSteel: '#53728A'
+                    },
+                    fontFamily: {
+                        heading: ['Quicksand', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFBF7;
+            color: #22252A;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(36, 109, 117, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-brandBeige text-brandSlate antialiased min-h-screen flex flex-col justify-between">
+
+    <header class="w-full bg-white/90 backdrop-blur-md border-b border-brandSage/20 sticky top-0 z-50 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+            <!-- Brand Logo Mark & Title -->
+            <a href="#" class="flex items-center gap-3 group">
+                <!-- SVG Logo replicating your exact power-button + smile brand icon -->
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
+                    <svg viewBox="0 0 100 100" class="w-full h-full">
+                        <!-- Gradient definitions -->
+                        <defs>
+                            <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#90A995" />
+                                <stop offset="50%" stop-color="#246D75" />
+                                <stop offset="100%" stop-color="#53728A" />
+                            </linearGradient>
+                        </defs>
+                        <!-- Main outer arc ring -->
+                        <path d="M 28 32 A 36 36 0 1 0 72 32" fill="none" stroke="url(#circleGrad)" stroke-width="12" stroke-linecap="round"/>
+                        <!-- Center T symbol -->
+                        <path d="M 38 18 L 62 18 M 50 18 L 50 42" fill="none" stroke="#ECA824" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M 50 18 L 50 42" fill="none" stroke="#53728A" stroke-width="5" stroke-linecap="round"/>
+                        <!-- Smile arc -->
+                        <path d="M 35 60 Q 50 78 65 60" fill="none" stroke="#ECA824" stroke-width="8" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="text-2xl sm:text-3xl font-bold font-heading tracking-tight text-brandTeal">Tech <span class="text-brandSage">Ease</span></span>
+                    <p class="text-xs text-brandSlate/70 font-medium hidden sm:block">We turn tech headaches into smiles.</p>
+                </div>
+            </a>
+
+            <!-- Call to Action Header Button -->
+            <button onclick="openFormModal()" class="bg-brandTeal hover:bg-brandTeal/90 text-white text-sm sm:text-base font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all transform hover:-translate-y-0.5 shadow-md flex items-center gap-2">
+                <span>Request Service</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-16 pb-12 sm:pb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Hero Text Column -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <div class="inline-flex items-center gap-2 bg-brandSage/20 text-brandTeal px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brandYellow animate-pulse"></span>
+                        Serving Vero Beach & Sebastian, FL
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-brandTeal leading-tight font-heading">
+                        Friendly, Stress-Free <br class="hidden sm:inline"/>
+                        <span class="text-brandSlate">In-Home Tech Support</span>
+                    </h1>
+                    
+                    <p class="text-lg sm:text-xl text-brandSlate/80 leading-relaxed font-normal max-w-2xl">
+                        Tired of frustrating Wi-Fi, offline printers, or slow computers? Skip the confusing jargon and get patient, reliable help right at your door in Vero Beach & Sebastian.
+                    </p>
+
+                    <!-- Key Promises Badge Row -->
+                    <div class="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm font-medium text-brandSlate/80">
+                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-brandSage/30 shadow-sm">
+                            <span class="text-brandYellow">✓</span> Patient & Plain-English
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-brandSage/30 shadow-sm">
+                            <span class="text-brandYellow">✓</span> Clear Flat-Rate Quotes
+                        </div>
+                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-brandSage/30 shadow-sm">
+                            <span class="text-brandYellow">✓</span> In-Home Weekend Appointments
+                        </div>
+                    </div>
+
+                    <!-- Main Call-to-Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <button onclick="openFormModal()" class="w-full sm:w-auto bg-brandTeal hover:bg-[#1C565D] text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-3">
+                            <span>Request Service / Get a Quote</span>
+                            <span class="bg-brandYellow text-brandSlate rounded-full p-1 text-xs">➔</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Illustration Box -->
+                <div class="lg:col-span-5">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Decorative background glow -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brandSage/30 to-brandYellow/20 rounded-3xl blur-xl opacity-70"></div>
+                        
+                        <!-- Visual Card: Custom In-Home Tech Support Graphic -->
+                        <div class="relative bg-white p-6 sm:p-8 rounded-3xl border border-brandSage/30 soft-shadow text-center space-y-6">
+                            <!-- SVG Graphic depicting friendly in-home tech assistance -->
+                            <div class="w-full h-48 sm:h-56 bg-brandBeige rounded-2xl p-4 flex items-center justify-center relative overflow-hidden">
+                                <svg class="w-full h-full max-w-[280px]" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <!-- Laptop Screen -->
+                                    <rect x="40" y="40" width="120" height="75" rx="6" fill="#53728A"/>
+                                    <rect x="46" y="46" width="108" height="63" rx="3" fill="#FDFBF7"/>
+                                    <!-- Screen Content (Checkmarks + Wi-Fi) -->
+                                    <circle cx="100" cy="70" r="14" fill="#90A995" opacity="0.3"/>
+                                    <path d="M 92 70 L 98 76 L 108 64" stroke="#246D75" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M 70 92 L 130 92" stroke="#246D75" stroke-width="3" stroke-linecap="round"/>
+                                    <!-- Laptop Base -->
+                                    <path d="M 25 118 C 25 115 28 115 30 115 L 170 115 C 172 115 175 115 175 118 L 165 125 L 35 125 Z" fill="#22252A"/>
+                                    <!-- Smile / Relief Bubble -->
+                                    <circle cx="150" cy="35" r="18" fill="#ECA824"/>
+                                    <path d="M 142 35 Q 150 44 158 35" stroke="#22252A" stroke-width="3" stroke-linecap="round"/>
+                                    <!-- Wi-Fi Signals -->
+                                    <path d="M 40 30 A 12 12 0 0 1 60 30" stroke="#246D75" stroke-width="3" stroke-linecap="round"/>
+                                    <path d="M 44 35 A 6 6 0 0 1 56 35" stroke="#246D75" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+
+                            <div class="space-y-1">
+                                <h3 class="text-xl font-bold font-heading text-brandTeal">Patient & Friendly Tech Help</h3>
+                                <p class="text-sm text-brandSlate/70">We come to your home, set everything up, and explain how it works without the confusing technical talk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-white py-12 sm:py-16 border-t border-b border-brandSage/20">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+                    <h2 class="text-2xl sm:text-4xl font-bold font-heading text-brandTeal mb-3">What We Help You With</h2>
+                    <p class="text-brandSlate/70 text-base sm:text-lg">No job is too small. From frustrating error messages to brand new home device setups.</p>
+                </div>
+
+                <!-- 4 Service Categories Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Service 1 -->
+                    <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
+                        <div class="w-12 h-12 bg-brandTeal text-white rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+                            🛜
+                        </div>
+                        <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Wi-Fi & Networks</h3>
+                        <p class="text-sm text-brandSlate/80 leading-relaxed">Fix dead zones, set up new routers, optimize mesh systems, and reconnect dropping devices.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
+                        <div class="w-12 h-12 bg-brandSage text-brandSlate rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+                            🖨️
+                        </div>
+                        <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Printers & Setup</h3>
+                        <p class="text-sm text-brandSlate/80 leading-relaxed">Fix wireless printer connections, clear offline errors, and set up scanning to your phone or PC.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
+                        <div class="w-12 h-12 bg-brandYellow text-brandSlate rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+                            💻
+                        </div>
+                        <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Computer Tune-Up</h3>
+                        <p class="text-sm text-brandSlate/80 leading-relaxed">Speed up slow PCs/Macs, remove unwanted malware, clean up storage, and transfer old files securely.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
+                        <div class="w-12 h-12 bg-brandSteel text-white rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
+                            📺
+                        </div>
+                        <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Smart Home & TVs</h3>
+                        <p class="text-sm text-brandSlate/80 leading-relaxed">Smart TV streaming setup, soundbars, Ring doorbells, smart speakers, and tablet configuration.</p>
+                    </div>
+
+                </div>
+
+                <!-- Simple Out-of-Scope Notice -->
+                <div class="mt-10 bg-brandBeige border border-brandSage/30 rounded-xl p-4 text-center max-w-xl mx-auto text-xs sm:text-sm text-brandSlate/70">
+                    <span class="font-semibold text-brandTeal">Note:</span> We focus exclusively on tech configuration and setup. We do not do physical wall mounting, plumbing, or electrical work!
+                </div>
+
+            </div>
+        </section>
+
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
+            <div class="bg-brandTeal text-white rounded-3xl p-8 sm:p-12 soft-shadow relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+                    <h2 class="text-2xl sm:text-4xl font-bold font-heading">Ready to Fix Your Tech Headaches?</h2>
+                    <p class="text-white/90 text-sm sm:text-base">Fill out our quick 30-second intake request. We'll review your issue and reach out with a flat-rate quote and weekend appointment slot!</p>
+                    <div class="pt-2">
+                        <button onclick="openFormModal()" class="bg-brandYellow hover:bg-yellow-400 text-brandSlate font-bold text-base sm:text-lg px-8 py-3.5 rounded-full transition-all shadow-lg transform hover:scale-105">
+                            Request Service Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brandSlate text-white/80 py-8 border-t border-brandSlate">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-xs sm:text-sm">
+            <div>
+                <p class="font-bold text-white text-base font-heading">Tech Ease</p>
+                <p class="text-white/60">Serving Vero Beach, Sebastian & surrounding areas.</p>
+            </div>
+            <div class="text-white/50">
+                &copy; <script>document.write(new Date().getFullYear())</script> Tech Ease. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div id="formModal" class="fixed inset-0 bg-brandSlate/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 relative soft-shadow space-y-5 transform transition-all">
+            <!-- Close Button -->
+            <button onclick="closeFormModal()" class="absolute top-4 right-4 text-brandSlate/50 hover:text-brandSlate text-2xl font-bold">
+                &times;
+            </button>
+
+            <div class="space-y-2">
+                <div class="w-10 h-10 rounded-full bg-brandSage/20 text-brandTeal flex items-center justify-center font-bold">
+                    📋
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-brandTeal">Request In-Home Service</h3>
+                <p class="text-xs sm:text-sm text-brandSlate/70">Click below to open our simple, quick service request form or paste your Tally link into this button!</p>
+            </div>
+
+            <!-- Form Hyperlink Box -->
+            <div class="bg-brandBeige p-4 rounded-xl border border-brandSage/30 space-y-3">
+                <p class="text-xs font-semibold text-brandTeal uppercase tracking-wider">Your Intake Form Link</p>
+                <!-- REPLACE THE HREF BELOW WITH YOUR ACTUAL TALLY FORM URL -->
+                <a id="tallyFormLink" href="https://tally.so" target="_blank" class="block w-full bg-brandTeal hover:bg-brandTeal/90 text-white font-semibold text-center py-3 rounded-lg shadow transition-all">
+                    Open Tech Ease Intake Form ↗
+                </a>
+            </div>
+
+            <div class="pt-2 text-center">
+                <button onclick="closeFormModal()" class="text-xs text-brandSlate/60 hover:underline">
+                    Back to website
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openFormModal() {
+            document.getElementById('formModal').classList.remove('hidden');
+        }
+        function closeFormModal() {
+            document.getElementById('formModal').classList.add('hidden');
+        }
+        // Close modal when clicking outside box
+        window.onclick = function(event) {
+            const modal = document.getElementById('formModal');
+            if (event.target == modal) {
+                closeFormModal();
+            }
+        }
+    </script>
+</body>
+</html>
