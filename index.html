@@ -6,12 +6,12 @@
     <title>Tech Ease | Friendly, Stress-Free In-Home Tech Support</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Quicksand (Rounded for Headings) & Inter (Clean for Body) -->
+    <!-- Google Fonts: Quicksand (Headings) & Inter (Body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
-   
-    <!-- Custom Tailwind Theme Configuration for Tech Ease Brand Palette -->
+    
+    <!-- Custom Tailwind Theme Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -33,10 +33,11 @@
         }
     </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        html, body {
+            overflow-x: hidden;
             background-color: #FDFBF7;
             color: #22252A;
+            font-family: 'Inter', sans-serif;
         }
         h1, h2, h3, .font-heading {
             font-family: 'Quicksand', sans-serif;
@@ -48,7 +49,8 @@
 </head>
 <body class="bg-brandBeige text-brandSlate antialiased min-h-screen flex flex-col justify-between">
 
-    <header class="w-full bg-white/90 backdrop-blur-md border-b border-brandSage/20 sticky top-0 z-50 transition-all">
+    <!-- Header / Navbar -->
+    <header class="w-full bg-white/95 backdrop-blur-md border-b border-brandSage/20 sticky top-0 z-50 transition-all">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
             <!-- Brand Logo Mark & Title -->
             <a href="#" class="flex items-center gap-3 group">
@@ -73,13 +75,12 @@
                 </div>
             </a>
 
-            <!-- Header Contact & Action Buttons -->
+            <!-- Right Header Contacts & CTA -->
             <div class="flex items-center gap-3 sm:gap-4">
-                <a href="tel:7724104647" class="hidden sm:flex items-center gap-2 text-brandTeal hover:text-brandTeal/80 font-bold text-sm sm:text-base border border-brandSage/30 px-3.5 py-2 rounded-full bg-brandBeige/50 transition-all">
-                    <span>📞</span>
-                    <span>(772) 410-4647</span>
+                <a href="tel:7724104647" class="hidden md:flex items-center gap-2 text-sm font-semibold text-brandTeal hover:text-brandTeal/80 transition-colors">
+                    <span>📞 (772) 410-4647</span>
                 </a>
-                <a href="https://tally.so/r/dWLgZN" target="_blank" class="bg-brandTeal hover:bg-brandTeal/90 text-white text-sm sm:text-base font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full transition-all transform hover:-translate-y-0.5 shadow-md flex items-center gap-2">
+                <a href="https://tally.so/r/dWLgZN" target="_blank" class="bg-brandTeal hover:bg-brandTeal/90 text-white text-xs sm:text-base font-semibold px-3.5 sm:px-6 py-2 sm:py-3 rounded-full transition-all transform hover:-translate-y-0.5 shadow-md flex items-center gap-1.5 sm:gap-2">
                     <span>Request Service</span>
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </a>
@@ -87,28 +88,29 @@
         </div>
     </header>
 
-    <main class="flex-grow">
-        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-16 pb-12 sm:pb-20">
+    <main class="flex-grow w-full overflow-x-hidden">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 sm:pt-16 pb-12 sm:pb-16">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-               
+                
                 <!-- Hero Text Column -->
                 <div class="lg:col-span-7 space-y-6 text-left">
                     <div class="inline-flex items-center gap-2 bg-brandSage/20 text-brandTeal px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold">
                         <span class="w-2 h-2 rounded-full bg-brandYellow animate-pulse"></span>
                         Serving Vero Beach & Sebastian, FL
                     </div>
-                   
+                    
                     <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-brandTeal leading-tight font-heading">
                         Friendly, Stress-Free <br class="hidden sm:inline"/>
                         <span class="text-brandSlate">In-Home Tech Support</span>
                     </h1>
-                   
-                    <p class="text-lg sm:text-xl text-brandSlate/80 leading-relaxed font-normal max-w-2xl">
+                    
+                    <p class="text-base sm:text-xl text-brandSlate/80 leading-relaxed font-normal max-w-2xl">
                         Tired of frustrating Wi-Fi, offline printers, or slow computers? Skip the confusing jargon and get patient, reliable help right at your door in Vero Beach & Sebastian.
                     </p>
 
                     <!-- Key Promises Badge Row -->
-                    <div class="pt-2 flex flex-wrap gap-4 text-xs sm:text-sm font-medium text-brandSlate/80">
+                    <div class="pt-2 flex flex-wrap gap-2.5 sm:gap-4 text-xs sm:text-sm font-medium text-brandSlate/80">
                         <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-brandSage/30 shadow-sm">
                             <span class="text-brandYellow">✓</span> Patient & Plain-English
                         </div>
@@ -116,54 +118,44 @@
                             <span class="text-brandYellow">✓</span> Clear Flat-Rate Quotes
                         </div>
                         <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-lg border border-brandSage/30 shadow-sm">
-                            <span class="text-brandYellow">✓</span> In-Home Weekend Appointments
+                            <span class="text-brandYellow">✓</span> In-Home Appointments
                         </div>
                     </div>
 
-                    <!-- Main Call-to-Action Buttons -->
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                        <a href="https://tally.so/r/dWLgZN" target="_blank" class="w-full sm:w-auto bg-brandTeal hover:bg-[#1C565D] text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-3 inline-flex">
-                            <span>Request Service / Get a Quote</span>
+                    <!-- Call-to-Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="https://tally.so/r/dWLgZN" target="_blank" class="w-full sm:w-auto bg-brandTeal hover:bg-[#1C565D] text-white font-semibold text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-3">
+                            <span>Request Service / Get Quote</span>
                             <span class="bg-brandYellow text-brandSlate rounded-full p-1 text-xs">➔</span>
                         </a>
-                        <a href="tel:7724104647" class="w-full sm:w-auto bg-white border-2 border-brandTeal text-brandTeal hover:bg-brandSage/10 font-bold text-lg px-6 py-4 rounded-xl transition-all shadow-md text-center flex items-center justify-center gap-2">
-                            <span>📞 Call / Text (772) 410-4647</span>
+                        <a href="tel:7724104647" class="w-full sm:w-auto bg-white border-2 border-brandTeal text-brandTeal hover:bg-brandBeige font-semibold text-base sm:text-lg px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl transition-all shadow-sm text-center flex items-center justify-center gap-2">
+                            <span>📞 Call (772) 410-4647</span>
                         </a>
                     </div>
                 </div>
 
-                <!-- Hero Graphic Illustration Box -->
+                <!-- Hero Graphic Box -->
                 <div class="lg:col-span-5">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
-                        <!-- Decorative background glow -->
                         <div class="absolute -inset-2 bg-gradient-to-r from-brandSage/30 to-brandYellow/20 rounded-3xl blur-xl opacity-70"></div>
-                       
-                        <!-- Visual Card: Custom In-Home Tech Support Graphic -->
-                        <div class="relative bg-white p-6 sm:p-8 rounded-3xl border border-brandSage/30 soft-shadow text-center space-y-6">
-                            <!-- SVG Graphic depicting friendly in-home tech assistance -->
-                            <div class="w-full h-48 sm:h-56 bg-brandBeige rounded-2xl p-4 flex items-center justify-center relative overflow-hidden">
-                                <svg class="w-full h-full max-w-[280px]" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Laptop Screen -->
+                        
+                        <div class="relative bg-white p-6 sm:p-8 rounded-3xl border border-brandSage/30 soft-shadow text-center space-y-4 sm:space-y-6">
+                            <div class="w-full h-44 sm:h-56 bg-brandBeige rounded-2xl p-4 flex items-center justify-center relative overflow-hidden">
+                                <svg class="w-full h-full max-w-[260px] sm:max-w-[280px]" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="40" y="40" width="120" height="75" rx="6" fill="#53728A"/>
                                     <rect x="46" y="46" width="108" height="63" rx="3" fill="#FDFBF7"/>
-                                    <!-- Screen Content (Checkmarks + Wi-Fi) -->
                                     <circle cx="100" cy="70" r="14" fill="#90A995" opacity="0.3"/>
                                     <path d="M 92 70 L 98 76 L 108 64" stroke="#246D75" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M 70 92 L 130 92" stroke="#246D75" stroke-width="3" stroke-linecap="round"/>
-                                    <!-- Laptop Base -->
                                     <path d="M 25 118 C 25 115 28 115 30 115 L 170 115 C 172 115 175 115 175 118 L 165 125 L 35 125 Z" fill="#22252A"/>
-                                    <!-- Smile / Relief Bubble -->
                                     <circle cx="150" cy="35" r="18" fill="#ECA824"/>
                                     <path d="M 142 35 Q 150 44 158 35" stroke="#22252A" stroke-width="3" stroke-linecap="round"/>
-                                    <!-- Wi-Fi Signals -->
-                                    <path d="M 40 30 A 12 12 0 0 1 60 30" stroke="#246D75" stroke-width="3" stroke-linecap="round"/>
-                                    <path d="M 44 35 A 6 6 0 0 1 56 35" stroke="#246D75" stroke-width="3" stroke-linecap="round"/>
                                 </svg>
                             </div>
 
                             <div class="space-y-1">
-                                <h3 class="text-xl font-bold font-heading text-brandTeal">Patient & Friendly Tech Help</h3>
-                                <p class="text-sm text-brandSlate/70">We come to your home, set everything up, and explain how it works without the confusing technical talk.</p>
+                                <h3 class="text-lg sm:text-xl font-bold font-heading text-brandTeal">Patient & Friendly Tech Help</h3>
+                                <p class="text-xs sm:text-sm text-brandSlate/70">We come to your home, set everything up, and explain how it works without the confusing technical talk.</p>
                             </div>
                         </div>
                     </div>
@@ -172,114 +164,163 @@
             </div>
         </section>
 
+        <!-- Services Grid -->
         <section class="bg-white py-12 sm:py-16 border-t border-b border-brandSage/20">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
-               
+                
                 <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
                     <h2 class="text-2xl sm:text-4xl font-bold font-heading text-brandTeal mb-3">What We Help You With</h2>
-                    <p class="text-brandSlate/70 text-base sm:text-lg">No job is too small. From frustrating error messages to brand new home device setups.</p>
+                    <p class="text-brandSlate/70 text-sm sm:text-lg">No job is too small. From frustrating error messages to brand new home device setups.</p>
                 </div>
 
-                <!-- 4 Service Categories Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                   
-                    <!-- Service 1 -->
                     <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
-                        <div class="w-12 h-12 bg-brandTeal text-white rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
-                            🛜
-                        </div>
+                        <div class="w-12 h-12 bg-brandTeal text-white rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">🛜</div>
                         <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Wi-Fi & Networks</h3>
                         <p class="text-sm text-brandSlate/80 leading-relaxed">Fix dead zones, set up new routers, optimize mesh systems, and reconnect dropping devices.</p>
                     </div>
 
-                    <!-- Service 2 -->
                     <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
-                        <div class="w-12 h-12 bg-brandSage text-brandSlate rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
-                            🖨️
-                        </div>
+                        <div class="w-12 h-12 bg-brandSage text-brandSlate rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">🖨️</div>
                         <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Printers & Setup</h3>
                         <p class="text-sm text-brandSlate/80 leading-relaxed">Fix wireless printer connections, clear offline errors, and set up scanning to your phone or PC.</p>
                     </div>
 
-                    <!-- Service 3 -->
                     <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
-                        <div class="w-12 h-12 bg-brandYellow text-brandSlate rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
-                            💻
-                        </div>
+                        <div class="w-12 h-12 bg-brandYellow text-brandSlate rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">💻</div>
                         <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Computer Tune-Up</h3>
                         <p class="text-sm text-brandSlate/80 leading-relaxed">Speed up slow PCs/Macs, remove unwanted malware, clean up storage, and transfer old files securely.</p>
                     </div>
 
-                    <!-- Service 4 -->
                     <div class="bg-brandBeige/60 p-6 rounded-2xl border border-brandSage/30 hover:border-brandTeal/50 transition-all soft-shadow group">
-                        <div class="w-12 h-12 bg-brandSteel text-white rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">
-                            📺
-                        </div>
+                        <div class="w-12 h-12 bg-brandSteel text-white rounded-xl flex items-center justify-center mb-4 text-2xl group-hover:scale-110 transition-transform">📺</div>
                         <h3 class="text-lg font-bold font-heading text-brandTeal mb-2">Smart Home & TVs</h3>
                         <p class="text-sm text-brandSlate/80 leading-relaxed">Smart TV streaming setup, soundbars, Ring doorbells, smart speakers, and tablet configuration.</p>
                     </div>
-
                 </div>
 
-                <!-- Simple Out-of-Scope Notice -->
-                <div class="mt-10 bg-brandBeige border border-brandSage/30 rounded-xl p-4 text-center max-w-xl mx-auto text-xs sm:text-sm text-brandSlate/70">
+                <div class="mt-8 bg-brandBeige border border-brandSage/30 rounded-xl p-4 text-center max-w-xl mx-auto text-xs sm:text-sm text-brandSlate/70">
                     <span class="font-semibold text-brandTeal">Note:</span> We focus exclusively on tech configuration and setup. We do not do physical wall mounting, plumbing, or electrical work!
                 </div>
 
             </div>
         </section>
 
-        <!-- Pricing & Menu Section -->
+        <!-- Service Rates & Pricing Section -->
         <section class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-            <div class="text-center max-w-2xl mx-auto mb-10">
+            <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
                 <h2 class="text-2xl sm:text-4xl font-bold font-heading text-brandTeal mb-3">Clear, Upfront Pricing</h2>
-                <p class="text-brandSlate/70 text-base sm:text-lg">No hidden fees or unexpected surprise bills. Know what you're paying before work begins.</p>
+                <p class="text-brandSlate/70 text-sm sm:text-base">No hidden hourly traps or surprising add-ons. Here is our straightforward rate menu:</p>
             </div>
 
-            <!-- Framing Statement Callout -->
-            <div class="bg-brandSage/15 border border-brandSage/40 rounded-2xl p-6 sm:p-8 mb-10 max-w-4xl mx-auto text-center soft-shadow">
-                <p class="text-base sm:text-lg font-medium text-brandSlate leading-relaxed">
-                    "Our in-home service visits have a <strong class="text-brandTeal font-bold">$40 minimum</strong>, which covers our travel and initial diagnosis/first 30 minutes of support. For standard setups and fixes, we provide clear flat-rate pricing upfront before doing any work!"
-                </p>
+            <!-- In-Home Service Call Framing Banner -->
+            <div class="bg-brandSage/15 border-l-4 border-brandTeal p-4 sm:p-6 rounded-r-2xl mb-8 max-w-4xl mx-auto text-xs sm:text-base text-brandSlate/90 leading-relaxed">
+                <p class="font-semibold text-brandTeal text-sm sm:text-lg mb-1">🚗 How In-Home Pricing Works:</p>
+                Our in-home service visits have a <strong>$40 minimum</strong>, which covers our travel and initial diagnosis/first 30 minutes of support. For standard setups and fixes, we provide clear flat-rate pricing upfront before doing any work!
             </div>
 
-            <!-- Pricing Table / Menu Card Container -->
+            <!-- Service Menu Table Box -->
             <div class="bg-white rounded-2xl border border-brandSage/30 soft-shadow overflow-hidden max-w-4xl mx-auto">
-                <div class="bg-brandTeal text-white px-6 py-4 flex items-center justify-between">
-                    <h3 class="text-lg sm:text-xl font-bold font-heading">Service Menu & Rates</h3>
-                    <span class="text-xs sm:text-sm bg-brandYellow text-brandSlate px-3 py-1 rounded-full font-semibold">Flat-Rate & Hourly</span>
-                </div>
-
-                <!-- Table View for Medium+ Screens -->
-                <div class="hidden sm:block overflow-x-auto">
-                    <table class="w-full text-left border-collapse text-sm">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[500px]">
                         <thead>
-                            <tr class="bg-brandBeige border-b border-brandSage/20 text-brandTeal font-heading text-base">
-                                <th class="py-4 px-6 font-bold">Service / Package</th>
-                                <th class="py-4 px-6 font-bold text-center">Flat Price</th>
-                                <th class="py-4 px-6 font-bold">Typical Scope</th>
+                            <tr class="bg-brandTeal text-white font-heading text-sm sm:text-base">
+                                <th class="py-3.5 px-4 sm:px-6 font-semibold">Service / Package</th>
+                                <th class="py-3.5 px-4 sm:px-6 font-semibold w-28 sm:w-36">Flat Price</th>
+                                <th class="py-3.5 px-4 sm:px-6 font-semibold">Typical Scope</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-brandSage/20 text-brandSlate">
-                            <tr class="hover:bg-brandBeige/40 transition-colors">
-                                <td class="py-4 px-6 font-bold text-brandTeal">Tech Consultation & Tune-Up</td>
-                                <td class="py-4 px-6 font-bold text-center text-brandTeal text-base">$50</td>
-                                <td class="py-4 px-6 text-brandSlate/80">PC/Mac cleanup, removing bloatware, running updates, malware scan, speeding up startup.</td>
+                        <tbody class="divide-y divide-brandSage/20 text-xs sm:text-sm text-brandSlate">
+                            <tr class="hover:bg-brandBeige/50 transition-colors">
+                                <td class="py-4 px-4 sm:px-6 font-bold text-brandTeal">Tech Consultation & Tune-Up</td>
+                                <td class="py-4 px-4 sm:px-6 font-semibold text-brandSlate text-sm sm:text-base">$50</td>
+                                <td class="py-4 px-4 sm:px-6 text-brandSlate/80">PC/Mac cleanup, removing bloatware, running updates, malware scan, speeding up startup.</td>
                             </tr>
-                            <tr class="hover:bg-brandBeige/40 transition-colors">
-                                <td class="py-4 px-6 font-bold text-brandTeal">Printer & Wi-Fi Rescue</td>
-                                <td class="py-4 px-6 font-bold text-center text-brandTeal text-base">$40 – $50</td>
-                                <td class="py-4 px-6 text-brandSlate/80">Connecting printers to all home devices, fixing Wi-Fi dropouts, mesh router setup.</td>
+                            <tr class="hover:bg-brandBeige/50 transition-colors">
+                                <td class="py-4 px-4 sm:px-6 font-bold text-brandTeal">Printer & Wi-Fi Rescue</td>
+                                <td class="py-4 px-4 sm:px-6 font-semibold text-brandSlate text-sm sm:text-base">$40 – $50</td>
+                                <td class="py-4 px-4 sm:px-6 text-brandSlate/80">Connecting printers to all home devices, fixing Wi-Fi dropouts, mesh router setup.</td>
                             </tr>
-                            <tr class="hover:bg-brandBeige/40 transition-colors">
-                                <td class="py-4 px-6 font-bold text-brandTeal">New Device Setup & Transfer</td>
-                                <td class="py-4 px-6 font-bold text-center text-brandTeal text-base">$60 – $75</td>
-                                <td class="py-4 px-6 text-brandSlate/80">Setting up a new computer, phone, or tablet, transferring photos/contacts, configuring email.</td>
+                            <tr class="hover:bg-brandBeige/50 transition-colors">
+                                <td class="py-4 px-4 sm:px-6 font-bold text-brandTeal">New Device Setup & Transfer</td>
+                                <td class="py-4 px-4 sm:px-6 font-semibold text-brandSlate text-sm sm:text-base">$60 – $75</td>
+                                <td class="py-4 px-4 sm:px-6 text-brandSlate/80">Setting up a new computer, phone, or tablet, transferring photos/contacts, configuring email.</td>
                             </tr>
-                            <tr class="hover:bg-brandBeige/40 transition-colors">
-                                <td class="py-4 px-6 font-bold text-brandTeal">Smart TV & Home Tech Setup</td>
-                                <td class="py-4 px-6 font-bold text-center text-brandTeal text-base">$50</td>
-                                <td class="py-4 px-6 text-brandSlate/80">Streaming device setup (Roku/Apple TV), soundbar connection, account sign-in & simple walk-through.</td>
+                            <tr class="hover:bg-brandBeige/50 transition-colors">
+                                <td class="py-4 px-4 sm:px-6 font-bold text-brandTeal">Smart TV & Home Tech Setup</td>
+                                <td class="py-4 px-4 sm:px-6 font-semibold text-brandSlate text-sm sm:text-base">$50</td>
+                                <td class="py-4 px-4 sm:px-6 text-brandSlate/80">Streaming device setup (Roku/Apple TV), soundbar connection, account sign-in & simple walk-through.</td>
                             </tr>
-                            <tr class="hover:bg-brandBeige/40 transition-colors">
-                        
+                            <tr class="hover:bg-brandBeige/50 transition-colors">
+                                <td class="py-4 px-4 sm:px-6 font-bold text-brandTeal">Password Cleanup & Tech Tutoring</td>
+                                <td class="py-4 px-4 sm:px-6 font-semibold text-brandSlate text-sm sm:text-base">$40 / hr</td>
+                                <td class="py-4 px-4 sm:px-6 text-brandSlate/80">Organizing passwords, 1-on-1 device tutoring, learning new apps, and answering tech questions.</td>
+                            </tr>
+                            <tr class="hover:bg-brandBeige/50 transition-colors">
+                                <td class="py-4 px-4 sm:px-6 font-bold text-brandTeal">Custom / Multi-Issue Work</td>
+                                <td class="py-4 px-4 sm:px-6 font-semibold text-brandSlate text-sm sm:text-base">$50 / hr</td>
+                                <td class="py-4 px-4 sm:px-6 text-brandSlate/80">For larger projects, home office wiring, or multi-device setups (1-hour minimum).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="bg-brandBeige px-4 sm:px-6 py-3 border-t border-brandSage/20 text-xs text-brandSlate/70 text-center font-medium">
+                    *(Included in-home service call-out minimum: $40)*
+                </div>
+            </div>
+        </section>
+
+        <!-- Ready CTA Block -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12 text-center">
+            <div class="bg-brandTeal text-white rounded-3xl p-6 sm:p-12 soft-shadow relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+                    <h2 class="text-2xl sm:text-4xl font-bold font-heading">Ready to Fix Your Tech Headaches?</h2>
+                    <p class="text-white/90 text-sm sm:text-base">Fill out our quick 30-second intake request or call us directly. We'll reach out with a flat-rate quote and appointment slot!</p>
+                    <div class="pt-3 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+                        <a href="https://tally.so/r/dWLgZN" target="_blank" class="w-full sm:w-auto bg-brandYellow hover:bg-yellow-400 text-brandSlate font-bold text-base px-8 py-3.5 rounded-full transition-all shadow-lg transform hover:scale-105 text-center">
+                            Request Service Now
+                        </a>
+                        <a href="tel:7724104647" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white border border-white/30 font-semibold text-base px-8 py-3.5 rounded-full transition-all text-center">
+                            📞 Call (772) 410-4647
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brandSlate text-white/80 pt-10 pb-8 border-t border-brandSlate mt-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left text-xs sm:text-sm">
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-2">
+                    <p class="font-bold text-white text-lg font-heading">Tech Ease</p>
+                    <p class="text-white/70 leading-relaxed">Friendly, patient, in-home tech support for Vero Beach, Sebastian & surrounding areas.</p>
+                </div>
+
+                <!-- Col 2: Direct Contact -->
+                <div class="space-y-2">
+                    <p class="font-bold text-brandYellow text-sm sm:text-base font-heading">Direct Contact</p>
+                    <p class="text-white/90 font-medium">Phone: <a href="tel:7724104647" class="underline hover:text-brandSage">(772) 410-4647</a></p>
+                    <p class="text-white/90 font-medium">Email: <a href="mailto:techease.verobeach@gmail.com" class="underline hover:text-brandSage">techease.verobeach@gmail.com</a></p>
+                </div>
+
+                <!-- Col 3: Payment Options -->
+                <div class="space-y-2">
+                    <p class="font-bold text-brandYellow text-sm sm:text-base font-heading">Accepted Payments</p>
+                    <p class="text-white/80 leading-relaxed">
+                        <strong>Flexible Payment Options:</strong> We accept Cash, Checks, Zelle, and major Credit/Debit Cards.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-center text-xs text-white/50">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Tech Ease. All rights reserved.</p>
+                <p>In-Home Tech Support • Vero Beach & Sebastian, FL</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
